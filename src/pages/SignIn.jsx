@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Section from "../components/Section";
 import Button from "../components/Button";
 import { GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -42,6 +42,8 @@ const SignIn = () => {
       setError("Google sign-in failed. Please try again.");
     },
   });
+
+  const navigate = useNavigate();
 
   const isFormValid = formData.email && formData.password;
 
@@ -119,7 +121,11 @@ const SignIn = () => {
           </div>
 
           <div className="flex justify-center gap-5">
-            <Button type="submit" disabled={!isFormValid}>
+            <Button
+              onClick={() => navigate("/organization")}
+              type="submit"
+              disabled={!isFormValid}
+            >
               Sign in
             </Button>
             <Button type="button" onClick={() => login()}>
