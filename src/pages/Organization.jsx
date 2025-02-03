@@ -130,7 +130,7 @@ const CompanySetupPage = () => {
             Start Scraping
           </Button>
           {showScrapingUI && (
-            <Link to="integration"><Button>
+            <Link to="/integration"><Button>
               Next Step
             </Button></Link>
           )}
