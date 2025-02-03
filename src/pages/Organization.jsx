@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 import Section from "../components/Section";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CompanySetupPage = () => {
   const [companyName, setCompanyName] = useState("");
@@ -130,9 +130,9 @@ const CompanySetupPage = () => {
             Start Scraping
           </Button>
           {showScrapingUI && (
-            <Button onClick={() => navigate("/integration")} >
+            <Link to="integration"><Button>
               Next Step
-            </Button>
+            </Button></Link>
           )}
         </div>
 
