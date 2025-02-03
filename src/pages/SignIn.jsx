@@ -119,9 +119,9 @@ const SignIn = () => {
           </div>
 
           <div className="flex justify-center gap-5">
-            <Button type="submit" disabled={!isFormValid}>
+            <Link to="/organization"><Button type="submit" disabled={!isFormValid}>
               Sign in
-            </Button>
+            </Button></Link>
             <Button type="button" onClick={() => login()}>
               Continue with Google
             </Button>
