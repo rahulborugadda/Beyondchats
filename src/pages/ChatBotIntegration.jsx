@@ -75,7 +75,7 @@ const ChatbotIntegration = () => {
             Mail Instructions to Developer
           </Button>
 
-          <Link to="integration-success"><Button px="px-8">
+          <Link to="integration-success"><Button>
             Test Integration
           </Button></Link>
         </div>
