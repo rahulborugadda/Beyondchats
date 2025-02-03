@@ -47,11 +47,6 @@ const ChatbotIntegration = () => {
     window.location.href = 'mailto:developer@client.com?subject=Chatbot Integration Instructions&body=Please find the chatbot integration instructions below:...';
   };
 
-  const handleTestIntegration = () => {
-    // Open a new screen with success UI
-    window.open('/integration-success', '_blank');
-  };
-
   return (
     <Section className="py-10 lg:py-16 xl:py-20">
       <Heading
@@ -79,9 +74,9 @@ const ChatbotIntegration = () => {
             Mail Instructions to Developer
           </Button>
 
-          <Button onClick={handleTestIntegration} px="px-8">
+          <Link to="integration-success"><Button px="px-8">
             Test Integration
-          </Button>
+          </Button></Link>
         </div>
       </div>
 
