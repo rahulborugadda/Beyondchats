@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 import Section from "../components/Section";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CompanySetupPage = () => {
   const [companyName, setCompanyName] = useState("");
